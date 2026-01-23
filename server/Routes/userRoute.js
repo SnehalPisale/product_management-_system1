@@ -1,0 +1,11 @@
+import express from "express";
+import { getAll } from "../Controllers/userController.js";
+import { createProduct } from "../Controllers/userController.js";
+import { updateProduct } from "../Controllers/userController.js";
+import { deleteProduct } from "../Controllers/userController.js";
+const router = express.Router();
+router.post("/create",createProduct);
+router.get("/getall",getAll);
+export default router;
+router.put("/update/:id",updateProduct);
+router.delete("/delete/:id",deleteProduct);
